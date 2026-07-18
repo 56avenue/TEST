@@ -37,6 +37,21 @@ npx remotion render
 npx remotion upgrade
 ```
 
+## Arcads Claude Code skill pack
+
+This project also has the [Arcads](https://arcads.ai/?via=claude-code) AI ad-creative
+skill pack installed — AI agents in Claude Code or Cursor can generate marketing
+videos and images (Seedance 2.0, Sora 2, Veo 3.1, Kling 3.0, Nano Banana, ChatGPT
+Image 2, OmniHuman) plus Meta static image ads.
+
+- Full skill-pack docs: [`ARCADS.md`](./ARCADS.md)
+- First-time setup (adds your Arcads API key): `./scripts/setup.sh`
+- Verify credentials: `./scripts/check-arcads-env.sh`
+
+Skills are defined under `skills/` and `shared/skills/`, and synced into
+`.claude/skills/` (and `.cursor/skills/`) automatically by the `SessionStart` hook
+in `.claude/settings.json`.
+
 ## Docs
 
 Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).

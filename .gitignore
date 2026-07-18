@@ -5,3 +5,32 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+
+# ── Arcads Claude Code skill pack ────────────────────────────────────────────
+# Secrets and personal workspace (never commit)
+.env
+.env.*
+!.env.example
+MASTER_CONTEXT.md
+# Synced skills are regenerated from skills/ and shared/skills/ at SessionStart
+.claude/skills/
+.claude/worktrees/
+.claude/settings.local.json
+.cursor/skills/
+# Generation artifacts and caches
+*.log
+__pycache__/
+*.pyc
+outputs/
+output/
+# Reference media is local-only (drop your own face/product shots into references/)
+references/**/*.jpg
+references/**/*.jpeg
+references/**/*.webp
+references/**/*.gif
+references/**/*.heic
+# Disposable one-off thumbnail iteration scripts (not the canonical skill script)
+scripts/generate-thumbnails.sh
+scripts/generate-thumbnails-*.sh
+scripts/generate-ab-variants*.sh
+scripts/regen-*.sh

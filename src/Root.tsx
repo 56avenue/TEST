@@ -2,12 +2,28 @@ import "./index.css";
 import { Composition } from "remotion";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
+import { PloufGoAd, ploufGoSchema } from "./PloufGoAd";
 
 // Each <Composition> is an entry in the sidebar!
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="PloufGoAd"
+        component={PloufGoAd}
+        durationInFrames={450}
+        fps={30}
+        width={1080}
+        height={1920}
+        schema={ploufGoSchema}
+        defaultProps={{
+          phone: "06 31 52 25 35",
+          city: "Saint-Pierre-Quiberon",
+          brand: "Plouf & Go",
+        }}
+      />
+
       <Composition
         // You can take the "id" to render a video:
         // npx remotion render HelloWorld
